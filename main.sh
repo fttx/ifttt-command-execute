@@ -9,4 +9,4 @@ function onFileChange {
 }
 export -f onFileChange
 
-fswatch -0 $fileToWatch | xargs -0 -n1 -I{} bash -c 'onFileChange "$@"' _
+/usr/local/bin/fswatch -0 $fileToWatch | xargs -0 -n1 -I{} bash -c 'onFileChange "$@"' _
